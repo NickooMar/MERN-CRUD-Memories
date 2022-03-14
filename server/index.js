@@ -16,8 +16,7 @@ app.use(cors());
 app.use('/posts', postRoutes)
 app.use('/users', userRoutes)
 
-const CONNECTION_URL =
-  "mongodb+srv://Nickoo:Nickoo123@cluster0.guinl.mongodb.net/<dbname>?retryWrites=true&w=majority";
+const CONNECTION_URL = process.env.MONGO_DATABASE_CONNECT;
 const PORT = process.env.PORT || 5000;
 
 mongoose
